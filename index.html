@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Science</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #3498db, #2ecc71, #e74c3c);
+            width: 100%; 
+            height: 700px;
+        }
+        #formulario {       
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+            height: 300px;
+            place-content: center;
+            place-items: center;
+            row-gap: 15px;
+        }
+        #titulo{
+            font-family: 'Segoe UI', Verdana, sans-serif;
+            text-shadow: 8px 4px 4px rgb(29, 225, 55);
+            grid-row: 1/2;
+            grid-column: 1/3;
+        }
+        #cal1{
+            grid-row: 2/3;
+        }
+        #cal2 {
+            grid-row: 2/3;
+        }
+        #cal1,
+        #cal2 {
+            border:solid 2px #37f302;
+            border-radius: 6px;
+            background-color: #f7c5fa;
+            color: #692323;
+            transition: border-color 0.8s ease;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS';
+        }
+        #cal1:focus,
+        #cal2:focus {
+            outline: none;
+            border-color: #6AAAAA;
+        }
+        #calcular {
+            grid-row: 3/4;
+            grid-column: 1/3;
+        }
+        #r{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #resultado {
+            font-family: Arial, sans-serif;
+            font-size: x-large;
+            text-align: center;
+            text-shadow: 2px 2px 2px coral;
+            max-width: 600px;
+        }
+        #calcular{
+            background: linear-gradient(to left, #37f302, #00eeff);
+            border:solid 2px #fff706;
+            border-radius: 8px;
+            color:darkmagenta;
+            box-shadow: 2px 4px 9px rgba(201, 40, 107, 0.8);
+            font-family: "Helvetica Neue", sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+            transition: font-size .8s ease;
+        }
+        #calcular:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+            font-size: 10px;
+        }
+        #calcular:focus{
+            box-shadow: 2px 2px 4px #ff005d;
+        }
+        #ff {
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            font-size: larger;
+            color: rgb(48, 63, 76);
+            font-style:oblique;
+        }
+        @media (max-width: 450px){
+            #titulo{
+                color: red;
+                width:100%;
+                text-align: center;
+            }
+            #resultado {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <form id="formulario">
+        <h1 id="titulo">Super Calculadora</h1>
+        <input id="cal1" type="text" placeholder="Escribe algo aqui ">
+        <input id="cal2" type="text" placeholder="Escribe algo aqui ">
+        <button id="calcular">Calcular</button>
+
+    </form>
+    <div id="r">
+        <p id="resultado"></p>
+    </div>
+    <p id="ff"></p>
+
+    <script src="./script.js" ></script>
+</body>
+</html>
